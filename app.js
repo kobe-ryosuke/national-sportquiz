@@ -93,7 +93,7 @@ const buttonLength =$button.length;
 document.getElementsByTagName("h2")[0].textContent = quiz[quizIndex].question;
 
 // クイズの問題文　選択肢を定義
-const setupQuiz = () => {
+function setupQuiz(){
   document.getElementsByTagName("h2")[0].textContent =quiz[quizIndex].question;
   let buttonIndex = 0;
   
@@ -104,7 +104,7 @@ const setupQuiz = () => {
 }
 setupQuiz();
 
-const clickHandler = (e) => {
+function clickHandler(e){
   if(quiz[quizIndex].correct === e.target.textContent){
     window.alert("正解！");
     score++;
